@@ -1,4 +1,5 @@
 const fastify = require('fastify')({ logger: true });
+const db = require('./dal.js');
 
 fastify.get('/healthcheck', async(req, resp) => {
     return {
