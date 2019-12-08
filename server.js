@@ -1,5 +1,5 @@
 const fastify = require('fastify')({ logger: true });
-const db = require('./dal.js');
+const db = require('./homeDal.js');
 
 db.init();
 
