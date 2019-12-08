@@ -16,7 +16,7 @@ services:
       - 3000
     ports: 
       - 3000:3000
-    command: bash -c "npm run migrate up && npm start"
+    command: npm start
     depends_on:
       - db
     links:
