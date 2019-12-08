@@ -1,11 +1,14 @@
 const fastify = require('fastify')({ logger: true });
 const db = require('./dal.js');
 
-fastify.get('/healthcheck', async(req, resp) => {
+fastify.get('/healthcheck', async (req, resp) => {
     return {
         status: 'ok'
     };
 });
+
+fastify.get('/homes', db.getHomes);
+
 
 const start = async () => {
     const PORT = process.env.PORT || 3000;
