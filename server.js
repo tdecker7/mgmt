@@ -12,6 +12,7 @@ fastify.get('/healthcheck', async (req, resp) => {
 });
 
 fastify.get('/homes', db.getHomes);
+fastify.post('/homes', db.createHome);
 
 
 const start = async () => {
