@@ -1,0 +1,27 @@
+version: '3'
+services:
+  db:
+    build: ./db/
+    image: treydecker75/mgmt:postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432/tcp
+    environment:
+      - POSTGRES_DB=mgmt
+  api:
+    build: ./
+    image: treydecker75/mgmt:node
+    expose:
+      - 3000
+    ports: 
+      - 3000:3000
+    command: npm start
+    depends_on:
+      - db
+    links:
+      - db:db
+
+volumes:
+  db-data:
+    driver: local
