@@ -1,0 +1,23 @@
+{
+  "name": "mgmt",
+  "version": "0.0.1",
+  "description": "simple management api",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tdecker7/mgmt.git"
+  },
+  "author": "Trey Decker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdecker7/mgmt/issues"
+  },
+  "homepage": "https://github.com/tdecker7/mgmt#readme",
+  "dependencies": {
+    "fastify": "^2.11.0"
+  }
+}
