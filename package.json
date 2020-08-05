@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/tdecker7/mgmt#readme",
   "dependencies": {
-    "fastify": "^2.11.0",
+    "fastify": "^2.15.1",
     "node-pg-migrate": "^3.23.3",
     "pg": "^7.14.0"
   }
